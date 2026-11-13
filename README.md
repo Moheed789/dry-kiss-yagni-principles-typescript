@@ -45,7 +45,7 @@ If the discount changes to 15%, both lines need an update. If one is missed, ord
 
 Two lines may look alike but serve different needs. For example, a student may pass a class with 50 marks, while a certificate may need 60 marks. These rules should stay separate if they can change for different reasons.
 
-Before joining repeated code, ask: **“Will these places always need the same change?”** If the answer is no, keeping them separate may be clearer.
+Join repeated code when the places follow the same rule and need the same changes. If they can change for different reasons, keeping them separate may be clearer.
 
 ### DRY can help when
 
@@ -85,12 +85,12 @@ Do not put a whole program into one long line just to make it shorter. Split cod
 
 A small task may not need many layers, settings, or tools. For example, a basic API may not need microservices or a plugin system at the start. Add that kind of structure when the project has a real need for it.
 
-After writing code, ask:
+After writing code, check that:
 
-- Do the names explain what the code does?
-- Can I understand the result without opening many files?
-- Did I add a step or setting that the task does not need?
-- Can I explain this code to another student in simple words?
+- Names explain what the code does.
+- The result is clear without opening many files.
+- No step or setting was added without a need.
+- Another person can understand the code.
 
 ---
 
@@ -125,14 +125,6 @@ Imagine you are making a student result program:
 3. **DRY:** If the same pass rule is used in many places, keep it in one place. But do not join rules that have different pass marks.
 
 The ideas help balance each other. DRY can lead to extra code if we try to join things that are not really the same. KISS reminds us to keep the solution clear. YAGNI helps us focus on what the task needs now.
-
-## Questions for class
-
-1. If the discount changes from 10% to 15%, which version in `dry.ts` is easier to update? Why?
-2. If two pieces of code look alike, how can we tell whether they follow the same rule?
-3. What kind of value does `age >= 18` give back?
-4. What problems could come from building a ranking system when we only need Pass or Fail?
-5. If a new need comes up later, can we add a feature then?
 
 ## Quick reminder
 
